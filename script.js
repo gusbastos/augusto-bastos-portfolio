@@ -2,23 +2,31 @@ const menuButton = document.querySelector("[data-menu-button]");
 const navLinks = document.querySelector("[data-nav-links]");
 const header = document.querySelector("[data-header]");
 
+const updateMenuButton = (isOpen) => {
+  if (!menuButton) return;
+  const label = isOpen ? "Close navigation" : "Open navigation";
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", window.portfolioI18n?.translateAttribute(label) || label);
+  menuButton.textContent = isOpen ? "×" : "☰";
+};
+
 if (menuButton && navLinks) {
   menuButton.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-    menuButton.textContent = isOpen ? "×" : "☰";
+    updateMenuButton(isOpen);
     document.body.classList.toggle("menu-open", isOpen);
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.setAttribute("aria-label", "Open navigation");
-      menuButton.textContent = "☰";
+      updateMenuButton(false);
       document.body.classList.remove("menu-open");
     });
+  });
+
+  document.addEventListener("portfolio-language-change", () => {
+    updateMenuButton(navLinks.classList.contains("open"));
   });
 }
 
