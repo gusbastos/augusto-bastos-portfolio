@@ -28,7 +28,7 @@
           <div class="reveal">
             <p class="eyebrow">Case study 01 · Customer acquisition</p>
             <h1>Digital Home Loan Lead Tracking</h1>
-            <p class="case-summary">An end-to-end reporting framework connecting CRM, campaign, paid media, and lead data to give BOQ Group a consistent view of digital home loan performance.</p>
+            <p class="case-summary">An end-to-end customer acquisition and lending analytics framework connecting digital leads, CRM, applications, and lending outcomes to assess conversion, lead quality, and acquisition costs at BOQ Group.</p>
           </div>
           <aside class="case-meta reveal" aria-label="Project overview">
             <div class="case-meta-row"><span>Environment</span><strong>Australian banking · Multi-brand</strong></div>
@@ -45,7 +45,7 @@
         <p class="eyebrow">Solution architecture</p>
         <div class="flow">
           <div class="flow-row">
-            <div class="flow-step">Website, app & paid media</div><div class="flow-step">Adobe Campaign</div><div class="flow-step">Dynamics 365 CRM</div><div class="flow-step">SQL & data preparation</div><div class="flow-step">Power BI reporting layer</div><div class="flow-step">Marketing, leaders & regions</div>
+            <div class="flow-step">Digital / Website / App Lead</div><div class="flow-step">Dynamics 365 CRM</div><div class="flow-step">Application</div><div class="flow-step">Lending Outcome</div><div class="flow-step">SQL & record matching</div><div class="flow-step">Power BI reporting layer</div>
           </div>
         </div>
       </div>
@@ -61,13 +61,13 @@
             <p class="eyebrow">Context</p>
             <h2>A new digital channel needed a reporting standard.</h2>
             <p>BOQ Group was launching and expanding digital home loan journeys across its banking brands. Leads were being generated through websites, digital campaigns, app journeys, paid media, and marketing activations, but the business did not yet have a structured way to track those leads end to end.</p>
-            <p>The work began around ME Bank and Virgin Money Australia activity and later expanded toward the broader Bank of Queensland environment. The initial version was delivered in approximately two months, then evolved through further releases for additional brands, states, reporting needs, and business questions.</p>
+            <p>The first major reporting version was released for ME Bank in approximately two months, then expanded to Virgin Money Australia and other BOQ environments. The work covered thousands of leads in a multi-brand Australian banking environment, supporting teams across a network of approximately 111 branches. Dashboards refreshed daily or weekly according to business need.</p>
           </section>
 
           <section class="case-block reveal" id="problem">
             <p class="eyebrow">Business problem</p>
             <h2>Connect acquisition activity to what happened next.</h2>
-            <p>The visibility gap went beyond missing reports. Digital Marketing, leadership, regional teams, and relationship stakeholders needed a consistent way to understand where leads came from, how they entered CRM, how follow-up progressed, and how different brands, states, and channels were performing.</p>
+            <p>Digital lead, CRM, application, and lending data existed in different systems with no common primary key connecting the full customer journey. Digital & Marketing could measure lead generation, but had limited visibility into which leads became applications and actual lending outcomes. Reliable record matching was needed before teams could compare acquisition performance.</p>
             <ul>
               <li>Trace lead sources across digital journeys and campaign activations.</li>
               <li>Connect paid media and marketing activity with customer acquisition outcomes.</li>
@@ -80,16 +80,24 @@
           <section class="case-block reveal" id="role">
             <p class="eyebrow">My role</p>
             <h2>Scoped and developed the reporting solution end to end.</h2>
-            <p>I worked across Data Analyst, CRM analyst, BI developer, and business analysis responsibilities. I gathered stakeholder requirements, helped define the reporting logic, understood how campaign and lead data behaved across systems, and translated those needs into an evolving Power BI solution.</p>
+            <p>I gathered requirements and clarified business funnel questions, then helped link fragmented sources using record-matching techniques where no shared key existed. My contribution covered SQL analysis and preparation, KPI and business-rule definition, Power BI and DAX, validation, data-quality checks, and reconciliation across the journey.</p>
             <p>I also supported iterative releases as the framework expanded across brands and geographies, balancing detailed operational questions with the concise view leadership needed.</p>
             <div class="callout"><strong>Working position</strong>I operated as an analytics partner between Digital & Marketing, CRM data, reporting technology, and the business teams responsible for lead follow-up.</div>
+            <div class="callout"><strong>CRM campaign and event reporting</strong>Related reporting connected CRM campaign IDs through campaign/event → CRM lead → banker → follow-up → conversion/performance. This made resulting leads, banker allocation, lead retrieval, follow-up, and outcomes visible, including a BOQ Specialist example involving professional and specialist banking customer segments.</div>
           </section>
 
           <section class="case-block reveal" id="solution">
             <p class="eyebrow">Solution</p>
             <h2>A governed decision-support layer for lead performance.</h2>
-            <p>The framework brought CRM, campaign, lead, and paid media information into a structured Power BI reporting layer. DAX measures and data preparation logic turned activity from multiple sources into views that stakeholders could use to monitor lead flow, channel performance, follow-up, and campaign effectiveness.</p>
+            <p>Record matching connected acquisition records with downstream CRM, application, and lending data. SQL preparation, DAX measures, and validated reporting logic made the linked journey usable in Power BI for both operational follow-up and commercial analysis.</p>
             <p>Rather than treating each request as a one-off report, the solution established reusable logic that could accommodate additional brands, states, and evolving business questions.</p>
+            <p>Digital / Website / App Lead → CRM → Application → Lending Outcome</p>
+            <ul>
+              <li>Compared lead source and channel, brand, branch, state/region, banker/agent, status, application progression, lending outcome, and conversion.</li>
+              <li>Examined lead quality, time-to-convert, geographic conversion differences, and acquisition-source quality; identified patterns associated with higher-quality or higher-converting leads.</li>
+              <li>Compared the cost of leads, cost of converted leads, and cost associated with non-converted leads to assess paid-media efficiency and customer acquisition performance.</li>
+            </ul>
+            <div class="callout"><strong>ME Bank and Virgin Money: a business investigation</strong>Comparable end-to-end data showed materially lower conversion for Virgin Money Australia leads than comparable ME Bank leads, despite broadly similar lending products. This provided a basis to investigate website and digital journeys, acquisition-source mix, lead quality, customer journeys, and downstream CRM/application progression.</div>
           </section>
 
           <section class="case-block reveal" id="tools">
@@ -101,7 +109,8 @@
           <section class="case-block reveal" id="impact">
             <p class="eyebrow">Business impact</p>
             <h2>From a visibility gap to a repeatable analytics capability.</h2>
-            <p>The solution gave business teams a consistent way to analyse digital home loan activity and supported more informed conversations around paid media, customer acquisition, CRM follow-up, and campaign performance.</p>
+            <p>With downstream outcomes visible, teams could compare acquisition sources using actual conversion rather than raw lead volume, identify weaker sources, and compare converted versus non-converted acquisition costs. The reporting informed marketing-budget allocation and helped identify and reduce unnecessary acquisition spend. Leadership gained clearer customer-acquisition visibility, while branch, banker, and lender teams could monitor leads and follow up across brands and regions.</p>
+            <p>Employee of the Month recognised the broader impact of my analytics work and project delivery, including this acquisition and lending framework.</p>
             <div class="impact-list">
               <div class="impact-item">Consistent lead and channel tracking</div><div class="impact-item">Clearer CRM follow-up visibility</div><div class="impact-item">Multi-brand and state comparisons</div><div class="impact-item">Better campaign and budget conversations</div><div class="impact-item">Executive and regional performance views</div><div class="impact-item">Employee of the Month recognition</div>
             </div>
@@ -109,7 +118,7 @@
 
           <section class="case-block reveal" id="confidentiality">
             <p class="eyebrow">Confidentiality</p>
-            <div class="confidentiality">This case study describes the business problem, delivery approach, and outcomes at a high level. The visual is an abstract representation; no customer data, internal figures, confidential campaign details, or BOQ Group dashboard screenshots are shown.</div>
+            <div class="confidentiality">Internal banking dashboards and customer-level reporting are not displayed publicly due to confidentiality and data-governance obligations.</div>
           </section>
 
           <div class="next-projects"><a href="../index.html#projects">← All projects</a><a href="market-intelligence-customer-behaviour.html">Next: Market Intelligence →</a></div>
